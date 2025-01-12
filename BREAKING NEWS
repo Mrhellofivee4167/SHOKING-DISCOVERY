@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shocking Discovery - Breaking Discovery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h1 {
+            color: #d9534f;
+            text-align: center;
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .comment-section {
+            margin-top: 40px;
+        }
+        .comments {
+            border-top: 2px solid #ddd;
+            margin-top: 20px;
+            padding-top: 20px;
+        }
+        .comment {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Shocking Discovery</h1>
+        <p>
+            Terry and Sam are in a committed relationship, proudly embracing their identity as a same-sex couple. Their bond is built on mutual respect, shared values, and a strong emotional connection, reflecting their authenticity and dedication to one another. As gay individuals, they celebrate their relationship as a testament to love and acceptance, fostering a partnership that thrives on open communication and mutual support. Their journey together highlights the importance of diversity and inclusivity, both in their personal lives and the broader social landscape.
+        </p>
+        <p><strong>Made by: Unknown</strong></p>
+
+        <div class="comment-section">
+            <h2>Comments</h2>
+            <textarea id="newComment" placeholder="Type your comment here..."></textarea>
+            <div class="comments" id="comments">
+                <!-- Comments will appear here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('newComment').addEventListener('input', function(e) {
+            const commentsDiv = document.getElementById('comments');
+            const newCommentText = e.target.value.trim();
+
+            if (newCommentText) {
+                const newComment = document.createElement('div');
+                newComment.className = 'comment';
+                newComment.textContent = newCommentText;
+
+                commentsDiv.appendChild(newComment);
+                e.target.value = '';
+            }
+        });
+    </script>
+</body>
+</html>
